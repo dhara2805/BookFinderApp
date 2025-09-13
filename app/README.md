@@ -2,18 +2,18 @@
 
 Setup Instructions
 - Clone the repository:
-- git clone https://github.com/your-repo/bookfinderapp.git
-- Open the project in Android Studio (latest version).
+- git clone https://github.com/dhara2805/BookFinderApp.git
+- Open the project in Android Studio.
 - Sync Gradle to download dependencies.
 - Run the app on an emulator or device with internet connection.
 
 Architecture Explanation
-- MVVM → Each feature has a Screen + ViewModel.
-- Clean Architecture (partial) →
-- data/ → Local (Room) + Remote (Retrofit DTOs) + Repository Impl.
-- domain/ → Models, Repository Interface, UseCases.
-- presentation/ → Composable screens + ViewModels.
-- Dependency Injection → via NetworkModule (Retrofit, DB, Repository).
+- MVVM - Each feature has a Screen + ViewModel.
+- Clean Architecture (partial)
+- data/ - Local (Room) + Remote (Retrofit DTOs) + Repository Impl.
+- domain/ - Models, Repository Interface, UseCases.
+- presentation/ - Composable screens + ViewModels.
+- Dependency Injection - via NetworkModule (Retrofit, DB, Repository).
 
 API Integration
 - API: OpenLibrary
@@ -42,12 +42,12 @@ This ensures maximum code reusability and minimizes duplication across platforms
 
 Database Design
 - Room Database with:
-  BookEntity (id, title, author, coverUrl, publishYear, description, isSaved).
+- BookEntity
 - BookDao for CRUD operations.
 - Data is cached locally for offline support (details screen fully supported).
 
 Known Limitations
 - Offline support implemented only for book details, not search listing.
-- Not all book descriptions are available via API (fallback text shown).
+- Not all book descriptions are available via API.
 - Unit tests and full use-case layer are not fully implemented.
 - Image loading may take time due to large cover sizes.
